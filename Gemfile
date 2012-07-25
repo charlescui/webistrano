@@ -23,5 +23,5 @@ end
 
 group :production do
   gem 'unicorn'
-  gem 'mysql2', '< 0.3'
 end
+gem 'mysql2', '< 0.3'
