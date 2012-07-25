@@ -1,6 +1,6 @@
-source 'http://rubygems.org'
+source 'http://ruby.taobao.org'
 
-gem 'rails', '3.0.3'
+gem 'rails'
 
 gem 'capistrano', '2.5.19'
 gem 'open4',      '0.9.3'
@@ -22,5 +22,6 @@ group :test do
 end
 
 group :production do
-  gem 'mysql'
+  gem 'mysql2'
+  gem 'unicorn'
 end
