@@ -48,7 +48,6 @@ after 'deploy:update_code' do
     "ln -nfs #{deploy_to}shared/config/database.yml #{release_path}/config/database.yml"
   ]
   run "#{softlinks.join(';')}"
-  run "cd #{current_path};bundle install"
 end
 
 after 'deploy' do
