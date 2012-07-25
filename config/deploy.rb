@@ -20,7 +20,7 @@ set :user,      "www"   # 服务器 SSH 用户名
 # ----------部署master或devel--------------------
 set :branch, "rails_3_upgrade"
 set :deploy_to, "/home/www/rca.webistrano/"
-# role :web, "125.210.209.154"                          # Your HTTP server, Apache/etc
+role :web, "yiqikan.tv"                          # Your HTTP server, Apache/etc
 role :app, "yiqikan.tv"                          # This may be the same as your `Web` server
 role :db, "yiqikan.tv"
 set :use_sudo,  false
