@@ -22,7 +22,7 @@ set :branch, "rails_3_upgrade"
 set :deploy_to, "/home/www/rca.webistrano/"
 role :web, "yiqikan.tv"                          # Your HTTP server, Apache/etc
 role :app, "yiqikan.tv"                          # This may be the same as your `Web` server
-role :db, "yiqikan.tv"
+role :db, "yiqikan.tv", :primary => true
 set :use_sudo,  false
 
 set :deploy_via, :remote_cache
@@ -50,7 +50,8 @@ end
 after 'deploy:update_code' do
   softlinks = [
     "ln -nfs #{deploy_to}shared/config/unicorn.rb #{release_path}/config/unicorn.rb",
-    "ln -nfs #{deploy_to}shared/config/database.yml #{release_path}/config/database.yml"
+    "ln -nfs #{deploy_to}shared/config/database.yml #{release_path}/config/database.yml",
+    "ln -nfs #{deploy_to}shared/config/webistrano_config.rb #{release_path}/config/webistrano_config.rb"
   ]
   run "#{softlinks.join(';')}"
 end
