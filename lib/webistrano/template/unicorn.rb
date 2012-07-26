@@ -8,9 +8,9 @@ module Webistrano
                                                                  :unicorn_user => 'www',
                                                                  :unicorn_group => 'www',
                                                                  :unicorn_bin => 'bundle exec unicorn_rails',
-                                                                 :unicorn_socket => '/home/www/rca.clear/current/tmp/sockets/unicorn.sock',
-                                                                 :unicorn_config => "/home/www/rca.clear/current/config/unicorn.rb",
-                                                                 :unicorn_pid => '/home/www/rca.clear/current/tmp/pids/unicorn.pid'
+                                                                 :unicorn_socket => '/home/www/rca.webistrano/current/tmp/sockets/unicorn.sock',
+                                                                 :unicorn_config => "/home/www/rca.webistrano/current/config/unicorn.rb",
+                                                                 :unicorn_pid => '/home/www/rca.webistrano/current/tmp/pids/unicorn.pid'
                                                              }).freeze
 
       DESC = <<-'EOS'
