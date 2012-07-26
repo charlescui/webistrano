@@ -11,8 +11,10 @@ module Webistrano
 
 
     # Make Active Record use UTC-base instead of local time
-    config.time_zone = 'UTC'
     config.encoding = "utf-8"
+    config.time_zone = "Asia/Shanghai"
+    config.active_record.default_timezone  = :local 
+    
     # config.filter_parameters += [:password, :password_confirmation]
 
     initializer "webistrano.load" do

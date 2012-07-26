@@ -25,3 +25,4 @@ group :production do
   gem 'unicorn'
 end
 gem 'mysql2', '< 0.3'
+gem 'rvm-capistrano'
