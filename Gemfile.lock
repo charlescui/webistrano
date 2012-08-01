@@ -37,6 +37,7 @@ GEM
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.0.0)
+    chronic (0.6.7)
     compass (0.10.6)
       haml (>= 3.0.4)
     devise (1.1.5)
@@ -106,6 +107,9 @@ GEM
     version_fu (1.0.1)
     warden (1.0.3)
       rack (>= 1.0.0)
+    whenever (0.7.3)
+      activesupport (>= 2.3.4)
+      chronic (~> 0.6.3)
 
 PLATFORMS
   ruby
@@ -126,3 +130,4 @@ DEPENDENCIES
   test-unit (= 2.0.9)
   unicorn
   version_fu
+  whenever

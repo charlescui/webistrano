@@ -26,3 +26,4 @@ group :production do
 end
 gem 'mysql2', '< 0.3'
 gem 'rvm-capistrano'
+gem 'whenever', :require => false
