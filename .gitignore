@@ -8,3 +8,4 @@ config/unicorn.rb
 .DS_Store
 .rake_tasks~
 public/stylesheets/*.css
+config/deploy.rb
