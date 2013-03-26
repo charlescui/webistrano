@@ -35,12 +35,18 @@ module Webistrano
       
         namespace :webistrano do
           namespace :thin do
-            [ :stop, :start, :restart ].each do |t|
+            [ :stop, :start ].each do |t|
               desc "#{t.to_s.capitalize} thin"
               task t, :roles => :app, :except => { :no_release => true } do
                 as = fetch(:runner, "app")
                 invoke_command "#{thin_bin} -O -C #{thin_config} #{t.to_s}", :via => run_method, :as => as
               end
+            end
+
+            desc "restart thin"
+            task :restart, :roles => :app, :except => { :no_release => true } do
+              as = fetch(:runner, "app")
+              invoke_command "kill -HUP `tail tmp/pids/thin.*.pid | grep ^[0-9]`", :via => run_method, :as => as
             end
           end
         end
