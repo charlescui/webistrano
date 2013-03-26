@@ -39,7 +39,7 @@ module Webistrano
               desc "#{t.to_s.capitalize} thin"
               task t, :roles => :app, :except => { :no_release => true } do
                 as = fetch(:runner, "app")
-                invoke_command "#{thin_bin} -C #{thin_config} #{t.to_s}", :via => run_method, :as => as
+                invoke_command "#{thin_bin} -O -C #{thin_config} #{t.to_s}", :via => run_method, :as => as
               end
             end
           end
