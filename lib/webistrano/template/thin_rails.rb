@@ -46,9 +46,7 @@ module Webistrano
         
         namespace :deploy do
           task :restart, :roles => :app, :except => { :no_release => true } do
-            webistrano.thin.stop
-            sleep(5)
-            webistrano.thin.start
+            webistrano.thin.restart
           end
           
           task :start, :roles => :app, :except => { :no_release => true } do
