@@ -46,8 +46,8 @@ module Webistrano
             desc "restart thin"
             task :restart, :roles => :app, :except => { :no_release => true } do
               as = fetch(:runner, "app")
-              # invoke_command "kill -HUP `tail #{current_path}/tmp/pids/thin.*.pid | grep ^[0-9]`", :via => run_method, :as => as
-              invoke_command "cd #{release_path};#{thin_bin} -C #{thin_config} restart -O", :via => run_method, :as => as
+              invoke_command "cd #{current_path};bundle exec kill -HUP `tail #{current_path}/tmp/pids/thin.*.pid | grep ^[0-9]`", :via => run_method, :as => as
+              # invoke_command "cd #{release_path};#{thin_bin} -C #{thin_config} restart -O", :via => run_method, :as => as
             end
           end
         end
