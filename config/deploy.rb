@@ -10,10 +10,12 @@ ssh_options[:auth_methods] = %w(publickey)
 ssh_options[:port] = 27788
 
 set :application, "rca.webistrano"
-set :repository,  "git@github.com:charlescui/webistrano.git"
+set :repository, "git@github.com:charlescui/webistrano.git"
 set :scm, :git
+# set :scm, :none
 set :scm_username, "zheng.cuizh@gmail.com"
 set :keep_releases, 5   # 留下多少个版本的源代码
+# set :deploy_via, :copy
 
 set :user,      "www"   # 服务器 SSH 用户名
 
