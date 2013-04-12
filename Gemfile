@@ -2,9 +2,9 @@
 
 gem 'rails'
 
-gem 'capistrano', '2.5.19'
-gem 'open4',      '0.9.3'
-gem 'syntax',     '1.0.0'
+gem 'capistrano'
+gem 'open4'
+gem 'syntax'
 gem 'version_fu'
 gem 'devise'
 gem 'compass'
@@ -24,7 +24,7 @@ end
 group :production do
   gem 'unicorn'
 end
-gem 'mysql2', '< 0.3'
+gem 'mysql2'
 gem 'rvm-capistrano'
 
 gem 'whenever', :require => false

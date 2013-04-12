@@ -178,22 +178,22 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capistrano (= 2.5.19)
+  capistrano
   compass
   devise
   factory_girl_rails
   haml
   hike
   mocha
-  mysql2 (< 0.3)
-  open4 (= 0.9.3)
+  mysql2
+  open4
   rails
   rvm-capistrano
   sidekiq!
   slim!
   sprockets
   sqlite3-ruby
-  syntax (= 1.0.0)
+  syntax
   test-unit (= 2.0.9)
   unicorn
   version_fu
