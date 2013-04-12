@@ -1,4 +1,4 @@
-source 'http://ruby.taobao.org'
+#source 'http://ruby.taobao.org'
 
 gem 'rails'
 
@@ -26,5 +26,12 @@ group :production do
 end
 gem 'mysql2', '< 0.3'
 gem 'rvm-capistrano'
+
 gem 'whenever', :require => false
-gem 'sidekiq'
+
+gem 'sprockets'
+gem 'hike'
+gem "kiqstand"
+
+gem 'sidekiq', :git => 'git://github.com/mperham/sidekiq.git', :require => 'sidekiq/capistrano'
+gem 'slim', :git => 'git://github.com/slim-template/slim.git'
