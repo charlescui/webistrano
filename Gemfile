@@ -31,7 +31,6 @@ gem 'whenever', :require => false
 
 gem 'sprockets'
 gem 'hike'
-gem "kiqstand"
 
 gem 'sidekiq', :git => 'git://github.com/mperham/sidekiq.git', :require => 'sidekiq/capistrano'
 gem 'slim', :git => 'git://github.com/slim-template/slim.git'

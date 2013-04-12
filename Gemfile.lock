@@ -88,9 +88,6 @@ GEM
     journey (1.0.4)
     json (1.7.7)
     kgio (2.8.0)
-    kiqstand (1.1.0)
-      mongoid (~> 3.1)
-      moped (~> 1.4)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -99,12 +96,6 @@ GEM
     mime-types (1.22)
     mocha (0.13.3)
       metaclass (~> 0.0.1)
-    mongoid (3.1.2)
-      activemodel (~> 3.2)
-      moped (~> 1.4.2)
-      origin (~> 1.0)
-      tzinfo (~> 0.3.22)
-    moped (1.4.5)
     multi_json (1.7.2)
     mysql2 (0.2.18)
     net-scp (1.1.0)
@@ -115,7 +106,6 @@ GEM
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
     open4 (0.9.3)
-    origin (1.0.11)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
     rack (1.4.5)
@@ -194,7 +184,6 @@ DEPENDENCIES
   factory_girl_rails
   haml
   hike
-  kiqstand
   mocha
   mysql2 (< 0.3)
   open4 (= 0.9.3)
