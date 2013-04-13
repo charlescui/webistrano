@@ -27,9 +27,14 @@ Webistrano::Application.configure do
   # Use a different cache store in production
   # config.cache_store = :mem_cache_store
 
+  config.assets.enabled = true
+  
   # Disable Rails's static asset server
   # In production, Apache or nginx will already do this
   config.serve_static_assets = false
+
+  # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)  
+  config.assets.precompile += %w( *.css )
 
   # Enable serving of images, stylesheets, and javascripts from an asset server
   # config.action_controller.asset_host = "http://assets.example.com"

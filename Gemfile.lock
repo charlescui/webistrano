@@ -21,6 +21,7 @@ GIT
       tilt (~> 1.3.6)
 
 GEM
+  remote: https://rubygems.org/
   specs:
     actionmailer (3.2.8)
       actionpack (= 3.2.8)
@@ -52,21 +53,30 @@ GEM
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
     builder (3.0.4)
-    capistrano (2.5.19)
+    capistrano (2.14.2)
       highline
       net-scp (>= 1.0.0)
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
-      net-ssh-gateway (>= 1.0.0)
+      net-ssh-gateway (>= 1.1.0)
     celluloid (0.12.4)
       facter (>= 1.6.12)
       timers (>= 1.0.0)
     chronic (0.9.0)
     chunky_png (1.2.8)
+    coffee-rails (3.2.2)
+      coffee-script (>= 2.2.0)
+      railties (~> 3.2.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.6.2)
     compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
+    compass-rails (1.0.3)
+      compass (>= 0.12.2, < 0.14)
     connection_pool (1.0.0)
     devise (2.1.2)
       bcrypt-ruby (~> 3.0)
@@ -74,6 +84,8 @@ GEM
       railties (~> 3.1)
       warden (~> 1.2.1)
     erubis (2.7.0)
+    execjs (1.4.0)
+      multi_json (~> 1.0)
     facter (1.6.18)
     factory_girl (4.2.0)
       activesupport (>= 3.0.0)
@@ -97,7 +109,7 @@ GEM
     mocha (0.13.3)
       metaclass (~> 0.0.1)
     multi_json (1.7.2)
-    mysql2 (0.2.18)
+    mysql2 (0.3.11)
     net-scp (1.1.0)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.1)
@@ -105,7 +117,7 @@ GEM
     net-ssh (2.6.6)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
-    open4 (0.9.3)
+    open4 (1.3.0)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
     rack (1.4.5)
@@ -142,6 +154,10 @@ GEM
     rvm-capistrano (1.2.7)
       capistrano (>= 2.0.0)
     sass (3.2.7)
+    sass-rails (3.2.6)
+      railties (~> 3.2.0)
+      sass (>= 3.1.10)
+      tilt (~> 1.3)
     sinatra (1.3.4)
       rack (~> 1.4)
       rack-protection (~> 1.3)
@@ -163,6 +179,9 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.37)
+    uglifier (1.3.0)
+      execjs (>= 0.3.0)
+      multi_json (~> 1.0, >= 1.0.2)
     unicorn (4.6.2)
       kgio (~> 2.6)
       rack
@@ -179,7 +198,8 @@ PLATFORMS
 
 DEPENDENCIES
   capistrano
-  compass
+  coffee-rails
+  compass-rails
   devise
   factory_girl_rails
   haml
@@ -189,12 +209,15 @@ DEPENDENCIES
   open4
   rails
   rvm-capistrano
+  sass
+  sass-rails
   sidekiq!
   slim!
   sprockets
   sqlite3-ruby
   syntax
   test-unit (= 2.0.9)
+  uglifier
   unicorn
   version_fu
   whenever

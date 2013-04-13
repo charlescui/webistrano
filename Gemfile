@@ -1,14 +1,25 @@
-#source 'http://ruby.taobao.org'
+source 'https://rubygems.org'
+# source 'http://ruby.taobao.org'
+
+gem 'capistrano', :require => 'capistrano'
+gem 'sidekiq', :git => 'git://github.com/mperham/sidekiq.git'
+gem 'slim', :git => 'git://github.com/slim-template/slim.git'
 
 gem 'rails'
 
-gem 'capistrano'
 gem 'open4'
 gem 'syntax'
 gem 'version_fu'
 gem 'devise'
-gem 'compass'
-gem 'haml'
+gem 'sass'
+gem 'haml', :require => 'sass'
+
+group :assets do
+  gem 'compass-rails', require: 'compass'
+  gem 'sass-rails', require: 'compass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
+end
 
 group :development do
   gem 'sqlite3-ruby', :require => 'sqlite3'
@@ -31,6 +42,3 @@ gem 'whenever', :require => false
 
 gem 'sprockets'
 gem 'hike'
-
-gem 'sidekiq', :git => 'git://github.com/mperham/sidekiq.git', :require => 'sidekiq/capistrano'
-gem 'slim', :git => 'git://github.com/slim-template/slim.git'
